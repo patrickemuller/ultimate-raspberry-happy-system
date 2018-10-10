@@ -1,4 +1,4 @@
-# Ultimate Raspberry Pi 3 Entertainment System
+# [WIP] - Ultimate Raspberry Pi 3 Entertainment System
 
 ## What is this?
 
