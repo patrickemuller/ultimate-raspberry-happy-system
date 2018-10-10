@@ -12,18 +12,19 @@ I spend a lot of time looking for projects to archive the goal of having a Raspb
 
 ## Pre-requisites
 
-- 1. Access through SSH to your Raspberry
-- 2. A gamer desktop to proccess your games
-- 3. Configure your game's shortcuts on PC to be open inside Steam
-- 4. Bluetooth gamepads (I'm using Xbox One S controllers)
+1. Access through SSH to your Raspberry
+2. A gamer desktop to proccess your games
+3. Configure your game's shortcuts on PC to be open inside Steam
+4. Bluetooth gamepads (I'm using Xbox One S controllers)
 
 ## What I need to do?
 
 This guide is separated in 4 steps:
-- 1. Configure Pi Hole
-- 2. Configure the dashbaord to check raspberry resources (CPU, Mem...)
-- 3a. Configure xPadNeo to use Xbox One S controllers
-- 3b. Configure Moonlight Embedded to play games from your Desktop
+
+1. Configure Pi Hole
+2. Configure the dashbaord to check raspberry resources (CPU, Mem...)
+3a. Configure xPadNeo to use Xbox One S controllers
+3b. Configure Moonlight Embedded to play games from your Desktop
 
 ## 1. Configure Pi hole ([link to project](https://pi-hole.net/))
 
