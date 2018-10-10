@@ -1,39 +1,75 @@
 # [WIP] - Ultimate Raspberry Pi 3 Entertainment System
 
-## What is this?
+## What the purpose of this?
 
-This is a guide on how to configure your Raspberry Pi 3 as AdBlocker, NAS server, miniDLNA media server AND Game Station using Nvidia Stream Protocol (only for Nvidia GPUs, sorry...)
+I spend a lot of time looking for projects to archive the goal of having a Raspberry on my TV room to play games and do some other stuff like blocking ads...
 
 ## After the steps, what I get?
 
-- AdBlocker (using Pi Hole)
-- NAS server using Raspberry
-- DLNA server to watch movies or show stuff on SmartTVs
-- Game console using your desktop Powerhorse (aka your Nvidia GPU)
+- AdBlocker for your home Network(using Pi Hole)
+- Monitoring Dashbord for Raspberry CPU, Memory...
+- Game streaming using Nvidia Stream technology (Moonlight Embedded Project)
+
+## Pre-requisites
+
+- 1. Access through SSH to your Raspberry
+- 2. A gamer desktop to proccess your games
+- 3. Configure your game's shortcuts on PC to be open inside Steam
+- 4. Bluetooth gamepads (I'm using Xbox One S controllers)
 
 ## What I need to do?
 
 This guide is separated in 4 steps:
 - 1. Configure Pi Hole
-- 2a. Configure NAS server
-- 2b. Configure DLNA server (to watch downloaded movies)
-- 3. Configure Moonlight Embedded to play games from your Desktop
-
-The only Dependencies here is steps 2 and 3, because to have a DLNA server you need to configure the NAS server first.
+- 2. Configure the dashbaord to check raspberry resources (CPU, Mem...)
+- 3a. Configure xPadNeo to use Xbox One S controllers
+- 3b. Configure Moonlight Embedded to play games from your Desktop
 
 ## 1. Configure Pi hole ([link to project](https://pi-hole.net/))
 
 This is the most straight foward of all.
 You just need to run `curl -sSL https://install.pi-hole.net | bash` and follow the steps provided on the wizard
 
-## 2a. Configure NAS Server
+## 2. Configuring the dashboard for Raspberry
+
+This process is easy to follow too, just paste and copy the following commands:
+
+Install `dirmngr` package
+
+```
+$ sudo apt-get install dirmngr
+```
+
+Configure the public keys for the repository
+
+```
+$ sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 2C0D3C0F
+$ sudo wget http://goo.gl/vewCLL -O /etc/apt/sources.list.d/rpimonitor.list
+```
+
+Update packages and install from repository
+
+```
+$ sudo apt-get update
+$ sudo apt-get install rpimonitor
+```
+
+(Optional) If you want to show deprecated packages installed on your Raspberry, use this command
+
+```
+$ sudo /etc/init.d/rpimonitor update
+```
+
+Done, you can access the dashboard from this address:
+
+```
+http://[raspberry_ip]:8888
+```
+
+## 3a. Configure xPadNeo to use Xbox One S Controllers
 
 WIP
 
-## 2b. Configure miniDLNA
+## 3b. Configure Moonlight Embedded project
 
-- `sudo apt-get install minidlna`
-Now you need to connect the USB driver you gonna use as storage (probably will be the largest one)
-- `sudo fdisk -l`
-
-## 4. WIP
+WIP
