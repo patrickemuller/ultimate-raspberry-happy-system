@@ -67,10 +67,36 @@ Done, you can access the dashboard from this address:
 http://[raspberry_ip]:8888
 ```
 
-## 3a. Configure xPadNeo to use Xbox One S Controllers
+## 3a. Configure xPadNeo to use Xbox One S Controllers  ([link to project](https://github.com/atar-axis/xpadneo))
 
-WIP
+The first step is to configure your raspberry with the last updates for `dkms` and `kernel-headers`
 
+```
+$ sudo apt-get install dkms raspberrypi-kernel-headers
+```
+
+Then, after this, you can clone the project and install
+
+```
+$ git clone https://github.com/atar-axis/xpadneo.git && cd xpadneo && ./install.sh
+```
+
+Just to be sure everything will be loaded fine, restart your raspberry
+
+```
+$ sudo reboot
+```
+
+Then you must pair the xbox controller (bluetooth version) with your raspberry
+
+```
+$ sudo bluetoothctl
+
+[bluetooth]# scan on
+[bluetooth]# pair <CONTROLLER_MAC>
+[bluetooth]# trust <CONTROLLER_MAC>
+[bluetooth]# connect <CONTROLLER_MAC>
+```
 ## 3b. Configure Moonlight Embedded project
 
 WIP
