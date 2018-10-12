@@ -99,4 +99,37 @@ $ sudo bluetoothctl
 ```
 ## 3b. Configure Moonlight Embedded project
 
-WIP
+First you need to add package's to repositories list
+
+```
+$ sudo nano /etc/apt/sources.list
+```
+
+Copy and paste this line (if you're using raspbian strech)
+
+``` 
+deb http://archive.itimmer.nl/raspbian/moonlight stretch main
+```
+
+Then, install the GPG key
+```
+$ wget http://archive.itimmer.nl/itimmer.gpg && sudo apt-key add itimmer.gpg
+```
+
+Update packages and finally install moonlight-stream
+
+```
+$ sudo apt-get update && sudo apt-get install moonlight-embedded
+```
+
+Pair your moonlight client with your Nvidia GPU using (the 4 number code will be inserted on your streaming machine)
+
+```
+$ moonlight pair
+```
+
+I found that the best configuration for my raspberry is the following, but you can play with numbers too.
+All the info is on ([this link](https://github.com/irtimmer/moonlight-embedded/wiki/Usage))
+```
+$ moonlight stream -1080 -fps 60 -bitrate 7500 -nosops
+```
