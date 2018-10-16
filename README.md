@@ -23,8 +23,8 @@ This guide is separated in 4 steps:
 
 1. Configure Pi Hole
 2. Configure the dashbaord to check raspberry resources (CPU, Mem...)
-3a. Configure xPadNeo to use Xbox One S controllers
-3b. Configure Moonlight Embedded to play games from your Desktop
+3. Configure xPadNeo to use Xbox One S controllers
+4. Configure Moonlight Embedded to play games from your Desktop
 
 ## 1. Configure Pi hole ([link to project](https://pi-hole.net/))
 
@@ -67,7 +67,7 @@ Done, you can access the dashboard from this address:
 http://[raspberry_ip]:8888
 ```
 
-## 3a. Configure xPadNeo to use Xbox One S Controllers  ([link to project](https://github.com/atar-axis/xpadneo))
+## 3. Configure xPadNeo to use Xbox One S Controllers  ([link to project](https://github.com/atar-axis/xpadneo))
 
 The first step is to configure your raspberry with the last updates for `dkms` and `kernel-headers`
 
@@ -97,7 +97,7 @@ $ sudo bluetoothctl
 [bluetooth]# trust <CONTROLLER_MAC>
 [bluetooth]# connect <CONTROLLER_MAC>
 ```
-## 3b. Configure Moonlight Embedded project
+## 4. Configure Moonlight Embedded project
 
 First you need to add package's to repositories list
 
