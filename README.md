@@ -133,3 +133,11 @@ All the info is on ([this link](https://github.com/irtimmer/moonlight-embedded/w
 ```
 $ moonlight stream -1080 -fps 60 -bitrate 7500 -nosops
 ```
+
+## EXTRA
+
+Here is the mapping for the newest Xbox One S bluetooth controller
+
+```
+050000005e040000fd02000030110000,Xbox Wireless Controller,a:b0,b:b1,x:b2,y:b3,start:b7,guide:b8,back:b6,leftstick:b9,rightstick:b10,leftshoulder:b4,rightshoulder:b5,dpup:h0.9,dpleft:h0.8,dpdown:h0.12,dpright:h0.2,leftx:a0,lefty:a1,rightx:a3,righty:a4,lefttrigger:a2,righttrigger:a5,platform:Linux
+```
